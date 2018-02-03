@@ -1,0 +1,11 @@
+{
+  "name": "MarluBot",
+  "version": "0.0.1",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "discord.js": "^11.3.0"
+  },
+  "main": "app.js",
+  "author": "MisterMarlu",
+  "description": "My first bot for Discord"
+}
