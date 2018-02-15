@@ -1,3 +1,20 @@
+if (typeof NO_DEBUG === 'undefined') {
+  /**
+   * Define DEBUG for debugging.
+   */
+  Object.defineProperty(global, 'NO_DEBUG', {
+    get: function () {
+      let noDebug = false;
+
+      for (let i = 0; i < process.argv.length; i += 1) {
+        if (process.argv[i] === 'noDebug') noDebug = true;
+      }
+
+      return noDebug;
+    }
+  });
+}
+
 const Discord = require('discord.js'),
   config = require('./config'),
   tokens = require('./tokens'),
@@ -5,10 +22,12 @@ const Discord = require('discord.js'),
   {getBotInfo} = require('./lib/info'),
   bot = new Discord.Client();
 
+// Executes when the bot is ready.
 bot.on('ready', () => {
   console.log('Bot woke up :)');
 });
 
+// Executes when a message was sent.
 bot.on('message', message => {
   // So the bot doesn't reply to iteself
   if (message.author.bot) return;
@@ -35,4 +54,5 @@ bot.on('message', message => {
   Commands.do(message, command, args, bot);
 });
 
+// Also a bot have to be logged in.
 bot.login(tokens.discrodToken);
