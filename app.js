@@ -1,14 +1,13 @@
-require('./lib/global');
-
 const Discord = require('discord.js'),
   config = require('./config'),
   tokens = require('./tokens'),
-  {Commands} = require('./lib/commands'),
+  {Commands} = require('./lib/Commands'),
   bot = new Discord.Client();
 
 // Executes when the bot is ready.
 bot.on('ready', () => {
   console.log('Bot woke up :)');
+  require('./lib/global');
 });
 
 // Executes when a message was sent.
