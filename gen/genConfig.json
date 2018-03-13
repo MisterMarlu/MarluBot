@@ -1,0 +1,11 @@
+{
+  "questions": {
+    "database": [
+      {
+        "type": "input",
+        "name": "file",
+        "message": "File name to import:"
+      }
+    ]
+  }
+}
