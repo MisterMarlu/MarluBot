@@ -1,0 +1,21 @@
+{
+  "locations": [
+    "ru",
+    "kr",
+    "br",
+    "oc",
+    "jp",
+    "na",
+    "eun",
+    "euw",
+    "tr",
+    "la1",
+    "la2"
+  ],
+  "noNumbers": [
+    "ru",
+    "kr",
+    "la1",
+    "la2"
+  ]
+}

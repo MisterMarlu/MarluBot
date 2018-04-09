@@ -102,4 +102,4 @@ class GenHelper {
   }
 }
 
-exports.GenHelper = GenHelper;
+module.exports = GenHelper;

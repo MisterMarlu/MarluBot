@@ -1,7 +1,7 @@
 const cp = require("child_process"),
   inquirer = require('inquirer'),
   genConfig = require('./genConfig'),
-  {GenHelper} = require('./GenHelper');
+  GenHelper = require('./GenHelper');
 
 class Generator {
   constructor() {
@@ -54,4 +54,4 @@ class Generator {
   }
 }
 
-exports.Generator = Generator;
+module.exports = Generator;

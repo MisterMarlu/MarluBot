@@ -1,0 +1,8 @@
+{
+  "lol_descInfo": "Gets information about the module \"League of Legends\".",
+  "lol_descElo": "Gets ranking information from a player. (?lol-elo SUMMONERNAME [SERVER=euw])",
+  "lol_descMatch": "Gets information about a current match. (?lol-match SUMMONERNAME [SERVER=euw])",
+  "lol_descVersion": "Gets the current version of the game.",
+  "lol_info": "The module \"League of Legends\" adds additional commands for the same-named game.",
+  "lol_version": "Version %s."
+}

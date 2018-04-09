@@ -1,4 +1,4 @@
-const Helper = require('./Helper');
+const Helper = require('../../lib/Helper');
 
 /**
  * Class CommandList is like an interface for commands. If any command is missing in this class you
@@ -6,16 +6,20 @@ const Helper = require('./Helper');
  * In the methods of this class are just the descriptions for each method.
  */
 class CommandList {
-  static info() {
-    return __('core_descInfo');
+  static lolInfo() {
+    return __('lol_descInfo');
   }
 
-  static debug() {
-    return __('core_descDebug');
-  }
+  // static lolElo() {
+  //   return __('lol_descElo');
+  // }
+  //
+  // static lolMatch() {
+  //   return __('lol_descMatch');
+  // }
 
-  static getCommands() {
-    return __('core_descGetCommands');
+  static lolVersion() {
+    return __('lol_descVersion');
   }
 }
 
