@@ -4,6 +4,7 @@ const Discord = require('discord.js'),
 
   // Import custom modules.
   DB = require('./lib/DB'),
+  Log = require('./lib/Log'),
   Commands = require('./lib/Commands'),
   ModuleManager = require('./lib/ModuleManager'),
 
@@ -27,7 +28,7 @@ connection.connect(error => {
 
   // Executes when the bot is ready.
   bot.on('ready', async () => {
-    console.log('Bot woke up :)');
+    Log.writeWithSpace('Bot woke up :)');
     await ModuleManager.mergeLocales();
     require('./lib/global');
   });
