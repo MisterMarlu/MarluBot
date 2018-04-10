@@ -1,4 +1,4 @@
-const BaseModel = require('../../lib/BaseModel');
+const BaseModel = require('../../../lib/BaseModel');
 
 let _table = 'lol_league',
   _fillable = [

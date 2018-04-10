@@ -1,14 +1,11 @@
 const BaseModel = require('../../../lib/BaseModel');
 
-let _table = 'lol_summoners',
+let _table = 'lol_version',
   _fillable = [
-    'accountId',
-    'summonerId',
-    'name',
-    'summonerLevel',
+    'version',
   ];
 
-class Summoner extends BaseModel {
+class Version extends BaseModel {
   static get table() {
     return _table
   }
@@ -18,4 +15,4 @@ class Summoner extends BaseModel {
   }
 }
 
-module.exports = Summoner;
+module.exports = Version;
