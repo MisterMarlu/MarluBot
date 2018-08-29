@@ -14,18 +14,7 @@ if (typeof NO_DEBUG === 'undefined') {
   });
 }
 
-if (typeof LOCALE === 'undefined') {
-  /**
-   * Define LOCALE.
-   */
-  Object.defineProperty(global, 'LOCALE', {
-    get: function () {
-      if (typeof commands.locale === 'undefined') commands.locale = 'en';
-
-      return commands.locale;
-    }
-  });
-}
+if (typeof commands.lang === 'undefined') commands.lang = 'en';
 
 i18n.configure({
   locales: ['en', 'de'],
@@ -33,4 +22,4 @@ i18n.configure({
   register: global
 });
 
-i18n.setLocale(LOCALE);
+i18n.setLocale(commands.lang);

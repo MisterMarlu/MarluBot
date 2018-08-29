@@ -4,5 +4,5 @@ const Generator = require('./Generator'),
 start().then();
 
 async function start() {
-  await generator.askForTables();
+  await generator.createServiceFile();
 }

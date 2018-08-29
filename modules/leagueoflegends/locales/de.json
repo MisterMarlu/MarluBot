@@ -1,0 +1,8 @@
+{
+  "lol_descInfo": "Gibt Informationen über das Modul \"League of Legends\" aus.",
+  "lol_descElo": "Gibt die Ranking-Informationen eines Spielers zurück. (?lol-elo BESCHWÖRERNAME [SERVER=euw])",
+  "lol_descMatch": "Gibt Informationen über ein laufendes Spiel zurück. (?lol-match BESCHWÖRERNAME [SERVER=euw])",
+  "lol_descVersion": "Gibt die aktuelle Version des Spiels zurück.",
+  "lol_info": "Das Modul \"League of Legends\" fügt zusätzliche Kommandos für das gleichnamige Spiel hinzu.",
+  "lol_version": "Version %s."
+}

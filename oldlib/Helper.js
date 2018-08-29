@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * In this class are a lot of helping methods.
  */
@@ -236,12 +238,9 @@ class Helper {
   static booted(filePath) {
     let pathArray = filePath.split('/'),
       nameArray = pathArray[pathArray.length - 1].split(('.')),
-      module = pathArray[pathArray.length - 2],
       name = nameArray[0];
 
-    if (module === 'lib') module = 'core';
-
-    Helper.console('Booted', `${module}/${name}`, 'success');
+    Helper.console('Booted', name, 'success');
   }
 
   /**
@@ -253,30 +252,8 @@ class Helper {
   static safeClone(source) {
     return JSON.parse(JSON.stringify(source));
   }
-
-  /**
-   * Refactoring paths like "this/is/some/ugly/../path" to a clear path like "this/is/some/path".
-   *
-   * @param {string} path The ugly version of a path.
-   * @returns {string} Returns a clean path.
-   */
-  static clearPath(path) {
-    let pathArray = path.split('/'),
-      i = 0;
-
-    while (i < pathArray.length) {
-      if (pathArray[i] !== '..') {
-        i += 1;
-        continue;
-      }
-
-      pathArray.splice(i - 1, 2);
-    }
-
-    return pathArray.join('/');
-  }
 }
 
-module.exports = Helper;
+exports.Helper = Helper;
 
 Helper.booted(__filename);

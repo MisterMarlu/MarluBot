@@ -1,0 +1,12 @@
+[Unit]
+Description=Starts the MarluBot automatically
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=%nodePath% %botPath% --noDebug=true --locale=de %logPath% 2>&1
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
