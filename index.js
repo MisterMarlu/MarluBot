@@ -6,6 +6,7 @@ const Discord = require('discord.js'),
   DB = require('./lib/DB'),
   Commands = require('./lib/Commands'),
   ModuleManager = require('./lib/ModuleManager'),
+  BotManager = require('./lib/BotManager'),
 
   // Import configurations.
   databaseInformation = require('./database'),
@@ -32,6 +33,8 @@ connection.connect(error => {
     let Log = require('./lib/Log');
     Log.initLogger(NO_DEBUG ? 'log' : 'dev-log');
     Log.writeWithSpace('Bot woke up :)', true);
+    BotManager.upTime = new Date().getTime();
+    BotManager.keepAlive(bot);
   });
 
   // Executes when a message was sent.

@@ -2,6 +2,7 @@
   "core_descGetCommands": "Gibt die Liste der Kommandos mit deren Beschreibungen aus.",
   "core_descInfo": "Gibt allgemeine Informationen über den Bot aus.",
   "core_descDebug": "Nur zur Entwicklung. (?debug [KOMMANDO] [ARGUMENTE])",
+  "core_descVersion": "Gibt die Version des MarluBots aus.",
 
   "core_getCommands": "**Kern**:",
   "core_commandListModule": "Modul **%s**:",
@@ -9,5 +10,5 @@
   "core_noCommand": "Das Kommando \"%s\" existiert nicht. Gib \"?get-commands\" ein um eine Liste der Kommandos mit den Beschreibungen zu bekommen.",
   "core_notReleased": "Der MarluBot ist noch nicht für die Benutzung bereit.",
 
-  "core_info": "Der MarluBot wird von MisterMarlu entwickelt. Er beinhaltet von Haus aus ein paar kleinere Befehle. Mit Modulen lässt sich der Bot erweitern, sodass an dem Bot an sich nichts mehr verändert werden muss. Er bietet sogar eine Datenbankanbindung um Daten zu speichern. Gehostet wird er auf einem eigenen Server in MisterMarlu's Wohnung."
+  "core_info": "Laufzeit: %d Tage, %s Stunden, %s Minuten, %s Sekunden.\r\nVersion: %s\r\nDer MarluBot wird von MisterMarlu entwickelt. Er beinhaltet von Haus aus ein paar kleinere Befehle. Mit Modulen lässt sich der Bot erweitern, sodass an dem Bot an sich nichts mehr verändert werden muss. Er bietet sogar eine Datenbankanbindung um Daten zu speichern. Gehostet wird er auf einem eigenen Server in MisterMarlu's Wohnung."
 }

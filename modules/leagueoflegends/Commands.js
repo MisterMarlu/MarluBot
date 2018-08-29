@@ -3,10 +3,25 @@ const Helper = require('../../lib/Helper'),
   LeagueOfLegends = require('./Controller/LeagueOfLegends');
 
 class Commands {
+
+  /**
+   * Get information about this module.
+   *
+   * @param message
+   * @param args
+   * @returns {Promise<Message | Message[]>}
+   */
   static lolInfo(message, args) {
     return message.channel.send(__('lol_info'));
   }
 
+  /**
+   * Get the elo of any summoner.
+   *
+   * @param message
+   * @param args
+   * @returns {Promise<void>}
+   */
   static async lolElo(message, args) {
     let lol = new LeagueOfLegends(),
       location = 'euw';
@@ -45,10 +60,24 @@ class Commands {
     message.channel.send(response);
   }
 
+  /**
+   * Get information of the current match.
+   *
+   * @param message
+   * @param args
+   * @returns {*}
+   */
   static lolMatch(message, args) {
-    return __('lol_descMatch');
+    return message.channel.send(__('lol_descMatch'));
   }
 
+  /**
+   * Get the current version of League of Legends.
+   *
+   * @param message
+   * @param args
+   * @returns {Promise<void>}
+   */
   static async lolVersion(message, args) {
     let lol = new LeagueOfLegends(),
       version = await lol.getVersion();

@@ -2,6 +2,7 @@ const Request = require('../../../lib/Request'),
 
   Version = require('../model/Version'),
   Champion = require('../model/Champion'),
+  Summoner = require('../model/Summoner'),
 
   config = require('../config/config'),
   token = require('../config/tokens'),
@@ -11,7 +12,8 @@ const Request = require('../../../lib/Request'),
   };
 
 let _location = '',
-  baseUrl = 'https://{location}.api.riotgames.com/lol';
+  baseUrl = 'https://{location}.api.riotgames.com/lol',
+  ddragon = 'https://ddragon.leagueoflegends.com/api';
 
 class LeagueOfLegends {
 
@@ -80,12 +82,8 @@ class LeagueOfLegends {
 
 
   async getVersion() {
-    let args = {
-        replace: this.buildReplacements(),
-        queryParameters: LeagueOfLegends.buildQuery(),
-      },
-      url = `${baseUrl}/static-data/v3/versions`,
-      response = await Request.get(url, args);
+    let url = `${ddragon}/versions.json`,
+      response = await Request.get(url);
 
     return response.data[0];
   }
@@ -105,6 +103,27 @@ class LeagueOfLegends {
     }
 
     return isLatest;
+  }
+
+  async lolElo(name) {
+    let summoner = await this.getSummonerByName(name);
+  }
+
+  async getSummonerByName(name) {
+    let summoner = await Summoner.where('name', name);
+
+    if (typeof summoner.id !== 'undefined') return summoner;
+    if (summoner.length > 1) return summoner[0];
+
+    let replace = [
+      {
+        pattern: '{summonerName}',
+        replacement: name,
+      }
+    ],
+      queryParameters =
+
+    replace = this.buildReplacements(replace);
   }
 
   async updateData(version) {

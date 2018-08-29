@@ -2,6 +2,7 @@
   "core_descGetCommands": "Get a list of all commands with their description.",
   "core_descInfo": "Get the current information of this bot.",
   "core_descDebug": "Just for development. (?debug [COMMAND] [ARGUMENTS])",
+  "core_descVersion": "Get the current version of the MarluBot.",
 
   "core_getCommands": "**Core**:",
   "core_commandListModule": "Module **%s**:",
@@ -9,5 +10,5 @@
   "core_noCommand": "There is no command called \"%s\". Type \"?get-commands\" to get a list of commands with their description.",
   "core_notReleased": "The MarluBot is not ready to use yet.",
 
-  "core_info": "The MarluBot will be developed by MisterMarlu. It includes some little commands. With modules the bot can be extended, so the bot can be untouched from developers. There is also a connection to a database to save data. The bot will be hosted by an own server in MisterMarlu's apartment."
+  "core_info": "Runtime: %d days, %s hours, %s minutes, %s seconds.\r\nVersion: %s\r\nThe MarluBot will be developed by MisterMarlu. It includes some little commands. With modules the bot can be extended, so the bot can be untouched from developers. There is also a connection to a database to save data. The bot will be hosted by an own server in MisterMarlu's apartment."
 }
